@@ -60,10 +60,10 @@ class RedeemActivity : BaseActivity(){
                     thread {
                         Thread.sleep(3000)
                         runOnUiThread {
-                            coinsManager.subtractCoins(price)
-                            updateCoins()
                             database.historyDao().insert(History(
                                     SimpleDateFormat("dd.MM.yyyy").format(System.currentTimeMillis()), coinsManager.getCoins()))
+                            coinsManager.subtractCoins(price)
+                            updateCoins()
                             dismisser.dismiss()
                             dialogsManager.showAlertDialog(supportFragmentManager,
                                     "You will receive your Gift Card in 3 - 7 days!", {
