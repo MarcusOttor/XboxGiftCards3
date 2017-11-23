@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                android:layout_marginTop="12dp"
+                android:id="@+id/cardScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.yarolegovich.discretescrollview.DiscreteScrollView>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginRight="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/history"
+                    android:id="@+id/history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/rateUs"
+                    android:src="@drawable/rate_us"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+
+                <ImageView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/share"
+                    android:src="@drawable/share"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+
+                <ImageView
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/logOut"
+                    android:src="@drawable/log_out"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/ticketcsGame"
+                    android:src="@drawable/tickets"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/offers"
+                    android:src="@drawable/more_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:src="@drawable/claim_coins"
+                android:id="@+id/claim"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include layout="@layout/banner" />
+    </LinearLayout>
+</FrameLayout>

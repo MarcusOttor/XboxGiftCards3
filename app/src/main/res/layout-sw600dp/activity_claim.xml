@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_back" />
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textGetCoins"
+                    android:textAllCaps="false"
+                    fontPath="fonts/avenir-heavy.ttf"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentTop="true"
+                    android:padding="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Claim free coins\nevery 30 minutes"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:layout_below="@id/textGetCoins"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/arcProgress"
+                    android:layout_width="230dp"
+                    android:layout_height="230dp">
+
+                    <ProgressBar
+                        android:layout_marginTop="10dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:max="45"
+                        android:progress="30"
+                        android:rotation="150.5"
+                        android:progressDrawable="@drawable/progress_back" />
+
+                    <ProgressBar
+                        android:id="@+id/progressView"
+                        android:layout_marginTop="10dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:max="45"
+                        android:progress="20"
+                        android:rotation="150.5"
+                        android:progressDrawable="@drawable/progress_front" />
+
+                    <TextView
+                        android:id="@+id/progressText"
+                        fontPath="fonts/avenir-heavy.ttf"
+                        android:text="18:16"
+                        android:textSize="40sp"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <Button
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/arcProgress"
+                    android:elevation="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/claim"
+                    android:id="@+id/claim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/claim"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/free_coins"
+                    android:id="@+id/moreCoins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include layout="@layout/banner" />
+    </LinearLayout>
+</FrameLayout>

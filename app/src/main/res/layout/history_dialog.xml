@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="300dp"
+    android:minHeight="300dp"
+    android:maxHeight="300dp"
+    android:layout_width="210dp"
+    android:minWidth="210dp"
+    android:background="@drawable/dialog_back_dark"
+    android:maxWidth="210dp">
+
+    <TextView
+        fontPath="fonts/ProximaNovaBold.otf"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:text="Payment History"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/close"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/close"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/noHistoryText"
+        fontPath="fonts/ProximaNovaBold.otf"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="No payments yet"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
+        android:id="@+id/recycler"
+        android:layout_width="210dp"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="210dp"
+    android:layout_height="56dp"
+    android:orientation="vertical">
+
+        <TextView
+            fontPath="fonts/ProximaNovaBold.otf"
+            android:id="@+id/paymentNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/paymentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_centerVertical="true"
+            android:text="05/11/2017"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/paymentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/paymentDate"
+            android:layout_alignBottom="@+id/paymentDate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="12dp"
+            android:gravity="end|center_vertical"
+            android:layout_marginRight="12dp"
+            android:singleLine="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:text="$121.00"
+            android:layout_toEndOf="@id/paymentDate"
+            android:layout_toRightOf="@id/paymentDate"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+</RelativeLayout>
