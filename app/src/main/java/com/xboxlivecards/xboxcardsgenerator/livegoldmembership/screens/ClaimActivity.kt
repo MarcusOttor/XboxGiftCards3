@@ -37,6 +37,7 @@ class ClaimActivity: BaseActivity(), Runnable {
                 MainActivity::class.java)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or
                         Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        finish()
     }
 
     @OnClick(R.id.claim)
