@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.support.multidex.MultiDex
+import android.support.multidex.MultiDexApplication
 import com.xboxlivecards.xboxcardsgenerator.livegoldmembership.core.advertisements.AdmobInterstitial
 import com.xboxlivecards.xboxcardsgenerator.livegoldmembership.core.advertisements.AdvertisementManager
 import com.xboxlivecards.xboxcardsgenerator.livegoldmembership.core.managers.CoinsManager
@@ -22,7 +23,7 @@ import com.yandex.metrica.YandexMetricaConfig
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 import javax.inject.Inject
 
-class MyApplication : Application() {
+class MyApplication : MultiDexApplication() {
 
     @Inject lateinit var calligraphy: CalligraphyConfig
     @Inject lateinit var coinsManager: CoinsManager
